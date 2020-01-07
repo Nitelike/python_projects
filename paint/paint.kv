@@ -1,0 +1,53 @@
+<Parent>:
+    orientation: 'vertical'
+    id: parent
+
+    PaintWidget:
+        size_hint_y: 12
+        id: painter
+
+    BoxLayout:
+        size_hint_y: 1
+
+        Button:
+            text: 'Clear'
+            on_release: painter.canvas.clear()
+
+        Button:
+            background_color: [0, 0, 0, 1]
+            background_normal: ''
+            on_release: painter.set_color([0, 0, 0, 1])
+
+        Button:
+            background_color: [0.9, 0, 0, 1]
+            background_normal: ''
+            on_release: painter.set_color([0.9, 0, 0, 1])
+
+        Button:
+            background_color: [0, 0.8, 0, 1]
+            background_normal: ''
+            on_release: painter.set_color([0, 0.8, 0, 1])
+
+        Button:
+            background_color: [0, 0, 0.8, 1]
+            background_normal: ''
+            on_release: painter.set_color([0, 0, 0.8, 1])
+
+        Button:
+            background_color: [0.9, 0.9, 0, 1]
+            background_normal: ''
+            on_release: painter.set_color([0.9, 0.9, 0, 1])
+
+        Button:
+            background_color: [0.9, 0, 0.9, 1]
+            background_normal: ''
+            on_release: painter.set_color([0.9, 0, 0.9, 1])
+
+        Button:
+            background_color: [0, 0.9, 0.9, 1]
+            background_normal: ''
+            on_release: painter.set_color([0, 0.9, 0.9, 1])
+
+        Button:
+            text: 'Save'
+            on_release: root.custom_popup()
